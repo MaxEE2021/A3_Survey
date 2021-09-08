@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3_Survey</title>
+    <meta name="description" content="This is a html of survey">
+    <style>
+        form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+}
+
+    </style>
+</head>
+<body>
+    <header align="center">Game Survey</header>
+    <form action="/Herewould be the server" method="POST" >
+        <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_email">
+            </li>
+            
+
+            <li>
+              <label for="number">Age:</label>
+              <input type="number" id="number" name="user_number">
+            </li>
+
+            <li>
+                <label for="Games-select">what game would you played</label>
+                <select name="User_Games" id="Games-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="Gears Of War">Gears Of War</option>
+                    <option value="Halo">Halo</option>
+                    <option value="Fortnite">Fortnite</option>
+                    <option value="Minecraft">Minecraft</option>
+                    <option value="Call Of Duty">Call Of Duty</option>
+                </select>
+            </li>
+
+            <li id="several-options">
+                <legend>Choose your favorite videogame character</legend>
+            
+                <input type="radio" id="kraken" name="characterGame">
+                <label for="halo">Master Chief</label><br/>
+            
+                <input type="radio" id="sasquatch" name="characterGame">
+                <label for="GOW">Marcus Fenix</label><br/>
+            
+                <input type="radio" id="mothman" name="characterGame">
+                <label for="Minecraft">Steve</label>
+            </li>
+
+            <li>
+                <label for="OtherSurvey">would you take other survey in a future?</label>
+                <input type="checkbox" name="OtherSurvey" id="BooleanSurvey">
+            </li>
+
+
+            <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message">Please leave your comments here</textarea>
+            </li>
+
+
+
+
+            <li>
+                <button type="submit">Send survey</button>
+            </li>
+           </ul>
+           
+    </form>
+
+
+
+
+
+</body>
+</html>
